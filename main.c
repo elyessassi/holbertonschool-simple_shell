@@ -5,23 +5,24 @@
  *
  */
 
-int main(int argc, char *argv[])
+int main(char *argv[])
 
 {
     char *n = NULL;
+    char **array = NULL;
+    int i = 0;
 
     while (1)
     {
         n = readline();
-        (void)argc;
-
         if (n == NULL)
         {
+            free(n);
             printf("\n");
             return (0);
         }
-        execv(argv[0], argv);
-        printf("%d\n", errno);
+        array = split(n);
+        freearray(array);
     }
     return (1);
 }
