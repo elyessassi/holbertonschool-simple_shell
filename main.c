@@ -5,13 +5,13 @@
  *
  */
 
-int main(char *argv[])
+int main(int ac, char *argv[])
 
 {
     char *n = NULL;
     char **array = NULL;
-    int i = 0;
 
+    (void)ac;
     while (1)
     {
         n = readline();
@@ -22,7 +22,7 @@ int main(char *argv[])
             return (0);
         }
         array = split(n);
-        freearray(array);
+        exec(argv, array);
     }
     return (1);
 }
