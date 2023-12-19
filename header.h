@@ -6,10 +6,12 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
+extern char **environ;
 
 char *readline(void);
-int main(char *argv[]);
+int main(int ac, char *argv[]);
 char **split(char *line);
 void freearray(char **array);
+int exec(char **argv, char **array );
 
 #endif
