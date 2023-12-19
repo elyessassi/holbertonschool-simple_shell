@@ -21,6 +21,10 @@ int main(int ac, char *argv[])
             return (0);
         }
         array = split(n);
+        if (!array)
+        {
+            continue;
+        }
         exec(argv, array);
     }
     return (1);
