@@ -22,7 +22,9 @@ int main(int ac, char *argv[])
         }
         array = split(n);
         if (!array)
-        continue;
+        {
+            continue;
+        }
         exec(argv, array);
     }
     return (1);
