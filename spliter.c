@@ -18,6 +18,12 @@ char **split(char *line)
     }
     temp = strdup(line);
     token = strtok(temp, d);
+    if (token == NULL)
+    {
+        free(line);
+        free(temp);
+        return(NULL);
+    }
     while (token)
     {
         x++;
