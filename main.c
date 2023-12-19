@@ -18,7 +18,6 @@ int main(int ac, char *argv[])
         if (n == NULL)
         {
             free(n);
-            printf("\n");
             return (0);
         }
         array = split(n);
