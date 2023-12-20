@@ -5,25 +5,29 @@
  * 
 */
 
-int mygetenv(void)
+char *mygetenv(void)
 {
     extern char **environ;
     char *nametest;
     char *name = "PATH";
     int index = 0;
+    char *temp;
 
-    nametest = strtok(*environ, "=");
+    temp = strdup(*environ);
+    nametest = strtok(temp, "=");
     while ((nametest != NULL) || (nametest != name))
     {
         if (strcmp(name, nametest) == 0)
         {
-            return(index);
+            return(*environ);
         }
         else
         {
             index++;
             *++environ;
-            nametest = strtok(*environ, "=");
+            temp = strdup(*environ);
+            nametest = strtok(temp, "=");
         }
     }
+    return (0);
 }
