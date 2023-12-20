@@ -24,7 +24,6 @@ char *mygetenv(void)
         else
         {
             index++;
-            *++environ;
             temp = strdup(*environ);
             nametest = strtok(temp, "=");
         }
