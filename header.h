@@ -18,5 +18,9 @@ int main(int ac, char *argv[]);
 char **split(char *line);
 void freearray(char **array);
 int exec(char **argv, char **array );
+int builtin(char *cmd);
+void handlebuiltin(char **cmd, int status);
+void exit_shell(char **cmd, int status);
+void print_env(char ** cmd, int status);
 
 #endif
