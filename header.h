@@ -18,5 +18,6 @@ int main(int ac, char *argv[]);
 char **split(char *line);
 void freearray(char **array);
 int exec(char **argv, char **array );
+int mygetenv(void);
 
 #endif
