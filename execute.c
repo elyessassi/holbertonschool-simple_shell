@@ -8,18 +8,16 @@ int exec(char **argv, char **array)
     pid_t forkval;
     int status;
     int exit_code;
-
     forkval = fork();
     if (forkval == 0)
     {
-       
         if (execve(array[0], array, NULL) == -1)
         {
             perror(argv[0]);
             freearray(array);
             exit(EXIT_FAILURE);
         }
-    } 
+    }
     else if (forkval > 0)
     {
         waitpid(forkval, &status, 0);
@@ -28,13 +26,13 @@ int exec(char **argv, char **array)
         }
         else
         {
-        exit_code = 1;  
+            exit_code = 1;
         }
         freearray(array);
         return exit_code;
     }
     else
-    {  
+    {
         perror("fork");
         exit(EXIT_FAILURE);
     }
