@@ -16,11 +16,11 @@ int builtin(char *cmd)
 /*
 *
 */
-void handlebuiltin(char **cmd, int status)
+void handlebuiltin(char **cmd, int *status)
 {
     int i;
 
-	if (strcmp(input[0], "exit") == 0)
+	if (strcmp(cmd[0], "exit") == 0)
 	{
 		freearray(cmd);
 		exit(*status);
