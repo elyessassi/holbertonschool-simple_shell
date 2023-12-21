@@ -28,6 +28,7 @@ int main(int ac, char *argv[])
         if (builtin(array[0]))
         handlebuiltin(array, status);
         else
+        path(argv[0]);
         exec(argv, array);
     }
     return (1);
