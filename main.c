@@ -25,7 +25,7 @@ int main(int ac, char *argv[])
         {
             continue;
         }
-        if (builtin(array[0]))
+        if (builtin(array[0])==1)
         handlebuiltin(array, status);
         else
         {
