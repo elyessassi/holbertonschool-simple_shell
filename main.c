@@ -11,6 +11,7 @@ int main(int ac, char *argv[])
     char *n = NULL;
     char **array = NULL;
     int status = 0;
+    int index = 0;
     (void)ac;
     while (1)
     {
@@ -29,7 +30,7 @@ int main(int ac, char *argv[])
         handlebuiltin(array, &status);
         else
         {
-            exec(argv, array);
+            exec(argv, array, index);
         }
     }
     return (1);
