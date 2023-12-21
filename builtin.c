@@ -16,14 +16,14 @@ int builtin(char *cmd)
 /*
 *
 */
-void handlebuiltin(char **cmd, int *status)
+void handlebuiltin(char **cmd, int status)
 {
     int i;
 
 	if (strcmp(cmd[0], "exit") == 0)
 	{
 		freearray(cmd);
-		exit(*status);
+		exit(status);
 	}
 	else if (strcmp(cmd[0], "env") == 0)
 	{
@@ -32,7 +32,7 @@ void handlebuiltin(char **cmd, int *status)
 			printf("%s\n", environ[i]);
 		}
 		freearray(cmd);
-		(*status) = 0;
+		(status) = 0;
 	}
 }
 
