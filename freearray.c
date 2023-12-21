@@ -1,9 +1,9 @@
 #include "header.h"
-
 /**
- * 
-*/
-
+ * Frees memory allocated for a dynamically allocated string array.
+ *
+ * array: The array of strings to be freed.
+ */
 void freearray(char **array)
 {
     int i;

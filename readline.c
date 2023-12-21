@@ -1,9 +1,8 @@
 #include "header.h"
-
 /**
- *
+ * Reads a line of input, displays "$ " in interactive mode.
+ * Returns: Input line or NULL on failure or end of input.
  */
-
 char *readline(void)
 {
     char *line = NULL;

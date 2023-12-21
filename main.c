@@ -1,10 +1,10 @@
 #include "header.h"
 #include <errno.h>
-
 /**
- *
+ * Simple shell main function.
+ * Reads, splits, and executes commands.
+ * Returns: 1 (arbitrary return value for the shell loop).
  */
-
 int main(int ac, char *argv[])
 
 {

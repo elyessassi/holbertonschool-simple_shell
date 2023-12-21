@@ -1,7 +1,9 @@
 #include "header.h"
 /*
-*
-*/
+ * Function: builtin
+ * Checks if the given command is a built-in command.
+ * cmd: A string representing the command to be checked.
+ */
 int builtin(char *cmd)
 {
     char *builtin[] = { "exit", "env", NULL };
@@ -14,27 +16,4 @@ int builtin(char *cmd)
         }
     }
     return (0);
-}
-
-/*
-*
-*/
-void handlebuiltin(char **cmd, int *status)
-{
-    int i;
-
-	if (strcmp(cmd[0], "exit") == 0)
-	{
-		freearray(cmd);
-		exit(*status);
-	}
-	else if (strcmp(cmd[0], "env") == 0)
-	{
-		for (i = 0; environ[i]; i++)
-		{
-			printf("%s\n", environ[i]);
-		}
-		freearray(cmd);
-		(*status) = 0;
-	}
 }
