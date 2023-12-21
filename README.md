@@ -1,8 +1,3 @@
-
-<div align="center">
-  <img src="https://github.com/elyessassi/holbertonschool-simple_shell.git" width="100%">
-</div>
-
 # [Simple Shell](https://via.placeholder.com/10/00b48a?text=+)
 
 The shell is like a program that receives command inputs from the user’s keyboard and sends them to a machine to be executed by the kernel.
