@@ -12,9 +12,10 @@ char *path(char *command)
     struct stat state;
 
     if (stat(command, &state) == 0)
-        return(command)
+        return(command);
     else
     {
+        env = mygetenv();
         test = strtok(env, ":");
         while (test)
 	    {
@@ -29,7 +30,7 @@ char *path(char *command)
 				    free(full);
 				    return (full);
 			    }
-			    full = my_strtok(NULL, ":");
+			    full = strtok(NULL, ":");
 		    }
         
         }
