@@ -9,8 +9,10 @@ char *mygetenv(void)
 {
     char *nametest;
     char *name = "PATH";
+    char *temp;
 
-    nametest = strtok(*environ, "=");
+    temp = strdup(*environ);
+    nametest = strtok(temp, "=");
     while ((nametest != NULL) || (nametest != name))
     {
         if (strcmp(name, nametest) == 0)
@@ -20,8 +22,8 @@ char *mygetenv(void)
         }
         else
         {
-            *++environ;
-            nametest = strtok(*environ, "=");
+            temp = strdup(*++environ);
+            nametest = strtok(temp, "=");
         }
     }
     return (0);
