@@ -18,14 +18,22 @@ int builtin(char *cmd)
 */
 void handlebuiltin(char **cmd, int status)
 {
-    if (strcmp(cmd[0], "exit") == 0)
-        exit_shell(cmd, status);
-    else if (strcmp(cmd[0], "env") == 0)
-        print_env(cmd, status);
-    else {
-        fprintf(stderr, "Unknown command: %s\n", cmd[0]);
-        freearray(cmd);
-    }
+    int i;
+
+	if (strcmp(input[0], "exit") == 0)
+	{
+		freearray(input);
+		exit(*status);
+	}
+	else if (strcmp(input[0], "env") == 0)
+	{
+		for (i = 0; environ[i]; i++)
+		{
+			printf("%s\n", environ[i]);
+		}
+		freearray(input);
+		(*status) = 0;
+	}
 }
 
 /*
