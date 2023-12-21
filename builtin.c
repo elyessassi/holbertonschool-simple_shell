@@ -22,16 +22,16 @@ void handlebuiltin(char **cmd, int status)
 
 	if (strcmp(input[0], "exit") == 0)
 	{
-		freearray(input);
+		freearray(cmd);
 		exit(*status);
 	}
-	else if (strcmp(input[0], "env") == 0)
+	else if (strcmp(cmd[0], "env") == 0)
 	{
 		for (i = 0; environ[i]; i++)
 		{
 			printf("%s\n", environ[i]);
 		}
-		freearray(input);
+		freearray(cmd);
 		(*status) = 0;
 	}
 }
