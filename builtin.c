@@ -35,26 +35,3 @@ void handlebuiltin(char **cmd, int *status)
 		(*status) = 0;
 	}
 }
-
-/*
-*
-*/
-void exit_shell(char **cmd, int status)
-{
-    freearray(cmd);
-    exit(status);
-}
-
-/*
-*
-*/
-void print_env(char **cmd, int status)
-{
-    int i;
-    (void)status;
-    for (i = 0; environ[i]; i++) {
-        write(STDOUT_FILENO, environ[i], strlen(environ[i]));
-        write(STDOUT_FILENO, "\n", 1);
-    }
-    freearray(cmd);
-}
