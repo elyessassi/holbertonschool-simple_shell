@@ -34,4 +34,6 @@ char *path(char *command)
         
         }
     }
+    free(full);
+    return(NULL);
 }
