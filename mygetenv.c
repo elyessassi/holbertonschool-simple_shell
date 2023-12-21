@@ -7,25 +7,21 @@
 
 char *mygetenv(void)
 {
-    extern char **environ;
     char *nametest;
     char *name = "PATH";
-    int index = 0;
-    char *temp;
 
-    temp = strdup(*environ);
-    nametest = strtok(temp, "=");
+    nametest = strtok(*environ, "=");
     while ((nametest != NULL) || (nametest != name))
     {
         if (strcmp(name, nametest) == 0)
         {
-            return(*environ);
+            nametest = strtok(NULL, "\n");
+            return(nametest);
         }
         else
         {
-            index++;
-            temp = strdup(*environ);
-            nametest = strtok(temp, "=");
+            *++environ;
+            nametest = strtok(*environ, "=");
         }
     }
     return (0);
