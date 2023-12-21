@@ -1,6 +1,10 @@
 #include "header.h"
 /**
- * Execute a command using fork and execve
+ * Executes a command based on the provided arguments and environment.
+ *
+ * @param argv The command-line arguments.
+ * @param array The array representing the command.
+ * @return The exit status of the executed command.
  */
 int exec(char **argv, char **array)
 {

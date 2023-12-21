@@ -1,7 +1,8 @@
 #include "header.h"
 /**
  * Retrieves the value of the environment variable "PATH."
- * Returns: A string containing the value of "PATH" or NULL if not found.
+ *
+ * @return A string containing the value of "PATH" or NULL if not found.
  */
 char *mygetenv(void)
 {

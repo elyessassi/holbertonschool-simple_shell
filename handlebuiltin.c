@@ -1,12 +1,9 @@
 #include "header.h"
-/*
- * Function: handlebuiltin
+/**
+ * Handles the execution of built-in commands like "exit" and "env."
  *
- * Executes built-in commands like "exit" and "env."
- * Frees memory for the command array.
- *
- * cmd: Command and arguments.
- * status: Pointer to shell exit status.
+ * @param cmd The array representing the command.
+ * @param status A pointer to the exit status of the shell.
  */
 void handlebuiltin(char **cmd, int *status)
 {

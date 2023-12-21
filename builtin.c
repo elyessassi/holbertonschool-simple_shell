@@ -1,8 +1,9 @@
 #include "header.h"
-/*
- * Function: builtin
+/**
  * Checks if the given command is a built-in command.
- * cmd: A string representing the command to be checked.
+ *
+ * @param cmd The command to be checked.
+ * @return 1 if the command is built-in, 0 otherwise.
  */
 int builtin(char *cmd)
 {

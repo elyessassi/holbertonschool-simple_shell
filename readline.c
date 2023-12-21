@@ -1,7 +1,10 @@
 #include "header.h"
 /**
- * Reads a line of input, displays "$ " in interactive mode.
- * Returns: Input line or NULL on failure or end of input.
+ * Reads a line of input from the user.
+ * If in interactive mode, displays a prompt "$ ".
+ *
+ * @return A dynamically allocated string containing the input line.
+ *         Returns NULL on failure or end of input.
  */
 char *readline(void)
 {

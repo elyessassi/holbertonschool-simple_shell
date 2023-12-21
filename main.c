@@ -2,8 +2,10 @@
 #include <errno.h>
 /**
  * Simple shell main function.
- * Reads, splits, and executes commands.
- * Returns: 1 (arbitrary return value for the shell loop).
+ *
+ * @param ac Number of command-line arguments.
+ * @param argv Array of command-line argument strings.
+ * @return 1 (arbitrary return value for the shell loop).
  */
 int main(int ac, char *argv[])
 

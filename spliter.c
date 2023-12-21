@@ -1,7 +1,12 @@
 #include "header.h"
 #include <stdio.h>
 #include <string.h>
-
+/**
+ * Splits a string into an array of strings based on delimiters.
+ *
+ * @param input The string to be split.
+ * @return An array of strings.
+ */
 char **split(char *line)
 {
     char *temp = NULL;
