@@ -11,7 +11,6 @@ int main(int ac, char *argv[])
     char *n = NULL;
     char **array = NULL;
     int status = 0;
-    char *pathdir;
     (void)ac;
     while (1)
     {
