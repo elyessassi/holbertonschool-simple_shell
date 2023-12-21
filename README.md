@@ -80,7 +80,9 @@ $
 
 ## [Flowchart](https://via.placeholder.com/10/00b48a?text=+)
 
-![App Screenshot](./flowchart.png)
+
+![Flowchart.drawio-1.png](https://github.com/elyessassi/holbertonschool-simple_shell/assets/146719704/67e5c5d5-cede-462d-9d56-1b81172e8a1c)
+
 
 ## [Our files](https://via.placeholder.com/10/00b48a?text=+)
 
