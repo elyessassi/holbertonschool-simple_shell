@@ -30,7 +30,6 @@ int main(int ac, char *argv[])
         handlebuiltin(array, status);
         else
         {
-            pathdir = path();
             exec(argv, array);
         }
     }
