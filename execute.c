@@ -7,6 +7,7 @@ int exec(char **argv, char **array)
     pid_t forkval;
     int status;
     int exit_status;
+
     forkval = fork();
     if (forkval == 0)
     {
@@ -16,8 +17,7 @@ int exec(char **argv, char **array)
             freearray(array);
             exit(EXIT_FAILURE);
         }
-    } else if (forkval > 0)
-    {
+    } else if (forkval > 0) {
         waitpid(forkval, &status, 0);
         if (WIFEXITED(status))
         {
@@ -29,9 +29,7 @@ int exec(char **argv, char **array)
         }
         freearray(array);
         return exit_status;
-    }
-    else
-    {
+    } else {
         perror("fork");
         exit(EXIT_FAILURE);
     }
