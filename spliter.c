@@ -9,7 +9,7 @@
  */
 char **split(char *line)
 {
-	char *temp = NULL, token = NULL,  d = " \t\n";
+	char *temp = NULL, *token = NULL,  *d = " \t\n";
 	int x = 0, i = 0;
 	char **array = NULL;
 
