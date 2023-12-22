@@ -17,7 +17,7 @@ char *readline(void);
 int main(int ac, char *argv[]);
 char **split(char *line);
 void freearray(char **array);
-int exec(char **argv, char **array );
+int exec(char **argv, char **array);
 int builtin(char *cmd);
 void handlebuiltin(char **cmd, int *status);
 char *mygetenv(void);
