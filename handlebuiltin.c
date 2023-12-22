@@ -1,13 +1,12 @@
 #include "header.h"
 /**
- * Handles the execution of built-in commands like "exit" and "env."
- *
- * @param cmd The array representing the command.
- * @param status A pointer to the exit status of the shell.
+ * handlebuiltin - Handles exit and env
+ * @cmd: The array representing the command.
+ * @status: A pointer to the exit status of the shell.
  */
 void handlebuiltin(char **cmd, int *status)
 {
-    int i;
+	int i;
 
 	if (strcmp(cmd[0], "exit") == 0)
 	{
