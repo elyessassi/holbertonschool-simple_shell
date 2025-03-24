@@ -1,29 +1,28 @@
 #include "header.h"
 /**
- * mygetenv - Retrieves the value of the environment variable "PATH."
+ * mygetenv - Retrieves the value of the environment variable "PATH"
  *
- * Return: A string containing the value of "PATH" or NULL if not found.
+ * Return: A string containing the value of "PATH" or NULL if not found
  */
+
 char *mygetenv(void)
 {
-	char *nametest;
-	char *name = "PATH";
+	char *value;
+	int i = 0;
 	char *temp;
 
-	temp = strdup(*environ);
-	nametest = strtok(temp, "=");
-	while ((nametest != NULL) || (nametest != name))
+	while (environ[i] != NULL)
 	{
-		if (strcmp(name, nametest) == 0)
+		temp = strdup(environ[i]);
+		if (strncmp("PATH", temp, 4) == 0)
 		{
-			nametest = strtok(NULL, "\n");
-			return (nametest);
+			strtok(temp, "=");
+			value = strdup(strtok(NULL, "="));
+			free(temp);
+			return (value);
 		}
-		else
-		{
-			temp = strdup(*++environ);
-			nametest = strtok(temp, "=");
-		}
+		free(temp);
+		i++;
 	}
 	return (0);
 }
