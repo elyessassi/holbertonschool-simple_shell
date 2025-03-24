@@ -10,11 +10,15 @@ int exec(char **argv, char **array)
 	pid_t forkval;
 	int status;
 	int exit_status;
+	char *command_with_path;
 
+	command_with_path = path(array[0]);
+	if (command_with_path == NULL) /*to make execve return not found*/
+		command_with_path = "";
 	forkval = fork();
 	if (forkval == 0)
 	{
-		if (execve(array[0], array, NULL) == -1)
+		if (execve(command_with_path, array, NULL) == -1)
 		{
 			perror(argv[0]);
 			freearray(array);
