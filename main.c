@@ -30,7 +30,7 @@ int main(int ac, char *argv[])
 		handlebuiltin(array, &status);
 		else
 		{
-		  status = exec(argv, array);
+			status = exec(argv, array);
 		}
 	}
 	return (1);
